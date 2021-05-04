@@ -1,0 +1,11 @@
+
+<div class="container" >
+    <h2>Artículo Válido</h2>
+    <mat-list role="list" *ngFor="let codigo of CodigosValido">
+        <mat-list-item role="listitem">{{codigo}} </mat-list-item>
+      </mat-list>
+      <h2>Artículo Inválido</h2>
+      <mat-list role="list" *ngFor="let codigo of CodigosInvalido">
+          <mat-list-item role="listitem"> {{codigo}} </mat-list-item>
+    </mat-list>
+</div>

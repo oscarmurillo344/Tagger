@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <h3 class="pt-3"> Añadir articulo por código
+        <button mat-icon-button color="primary" >
+            <mat-icon  matTooltip="ingresar 8 dígitos del 0-9">info</mat-icon></button>
+        </h3>
+    <mat-form-field appearance="outline" class="TxtCodigo" >
+        <mat-label>Codigo de articulo</mat-label>
+        <input matInput placeholder="Ej: 80265472, 98564528.."type="text" (keyup)="ValidarDigito($event)" [formControl]="Codigo" >
+         <button mat-button matSuffix mat-icon-button (click)="GuardarCodigo()">
+            <mat-icon >search</mat-icon>
+         </button>
+        </mat-form-field>
+        <span class="Error" *ngIf="errorMensaje">solo son 8 dígitos separados por coma</span>
+</div>

@@ -1,0 +1,18 @@
+<mat-toolbar color="mine">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="https://www.ikea.com/es/es/static/ikea-logo.d6ecde85fc6a53602086.svg" alt="IKEA: Tienda online de muebles, colchones, decoración y electrodomésticos" title="IKEA: Tienda online de muebles, colchones, decoración y electrodomésticos">
+    <span class="espacio"></span>
+    <button mat-icon-button>
+        <mat-icon>perm_identity</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>favorite</mat-icon>
+    </button>
+      <button mat-icon-button>
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+  </mat-toolbar>
+  <app-add-codes (Lista)="LLenarLista($event)" ></app-add-codes>
+  <app-tabla-codigo *ngIf="mostrar" [CodigosInvalido]="ListaCodigosInvalido" [CodigosValido]="ListaCodigosValido" ></app-tabla-codigo>
